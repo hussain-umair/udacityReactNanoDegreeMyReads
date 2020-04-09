@@ -1,9 +1,9 @@
 # MyReads Project
 
-Udacity's React Nano Degree My Read: A Book tracking app project
+This Udacity's React Nano Degree My Read: A Book tracking app project
 
-# How to run
+# Get Started
+To get started the right way:
 - clone this project
-- run command:
-#npm install
-#npm start
+to install all the dependencies #npm install
+to start the server #npm start
