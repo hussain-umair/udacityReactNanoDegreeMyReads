@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
-import { element } from 'prop-types'
 
 class Search extends Component{
     constructor(props){
@@ -75,7 +74,7 @@ class Search extends Component{
                   <li key={index}>
                         <div className="book">
                             <div className="book-top">
-                                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${typeof book.imageLinks !== 'undefined'&&book.imageLinks.thumbnail})` }}></div>
                                 <div className="book-shelf-changer">
                                     <select value={book.shelf?book.shelf:'none'} name={book.title} onChange={(event)=>this.handleChangeShelf(event,book)}>
                                         <option value="move" disabled>Move to...</option>
